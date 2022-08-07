@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0%;
-            padding: 0%;
-        }
-        .navbar{
-            height: 70px;
-            width: 100%;
-            background-color: black;
-            color: white;
-            margin: 0px 0px 00px 0px;
-        }
-        .left{
-            display: inline-block;
-            margin-left: 5%;
-            margin-right: 5%;
-            width: 40%;
-            height: 500px;
-            background-color: green;
-        }
-        .right{
-            display: inline-block;
-            margin-left: 5%;
-            margin-right: 5%;
-            width: 40%;
-            height: 500px;
-            background-color: rgb(85, 0, 255);
-        }
-        .center{
-            text-align: center;
-            background-color: violet;
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Basics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
-<body>
-    <div class="navbar">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contanc</li>
-        </ul>
 
+<body>
+  <h1>Social Media App</h1>
+  <div class="container">
+    <div class="left">
+      <form id="form">
+        <label for="">Write your post here</label>
+        <br><br>
+        <textarea name="" id="input" cols="30" rows="10"></textarea>
+        <br><br>
+        <div id="msg"></div>
+        <button type="submit">Post</button>
+      </form>
     </div>
-    <div class="left"></div><div class="right">
+    <div class="right">
+      <h3>Your posts here</h3>
+      <div id="posts">
+        <div>
+          <p>Post 1</p>
+          <span class="options">
+            <i onClick="editPost(this)" class="fas fa-edit"></i>
+            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+        <div>
+          <p>Post 2</p>
+          <span class="options">
+            <i onClick="editPost(this)" class="fas fa-edit"></i>
+            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+      </div>
     </div>
-    <footer>
-        <p class="center">Lorem ipsum dolor sit amet </p>
-    </footer>
+  </div>
 </body>
+<script src="main.js"></script>
+
 </html>
